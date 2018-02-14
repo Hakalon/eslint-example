@@ -22,7 +22,7 @@ Prevent reassign value to the parameters which are given by function.
 * [comma-dangle](https://eslint.org/docs/rules/comma-dangle)
 * [object-shorthand](https://eslint.org/docs/rules/object-shorthand)  
 It was how you should defind an object before ES6:  
-```=bash
+```
 var foo = {
     w: function() {},
     x: function *() {},
@@ -31,7 +31,7 @@ var foo = {
 };
 ```
 It is how you should defind an object after ES6:  
-```=bash
+```
 var foo = {
     w() {},
     *x() {},
