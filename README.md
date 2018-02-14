@@ -17,7 +17,6 @@ If you want to learn more, [here is the details](https://stackoverflow.com/quest
 * [no-console](https://eslint.org/docs/rules/no-console)
 * [no-plusplus](https://eslint.org/docs/rules/no-plusplus)
 * [no-param-reassign](https://eslint.org/docs/rules/no-param-reassign)  
-
 Prevent reassign value to the parameters which are given by function.
 * [arrow-parens](https://eslint.org/docs/rules/arrow-parens)
 * [comma-dangle](https://eslint.org/docs/rules/comma-dangle)
