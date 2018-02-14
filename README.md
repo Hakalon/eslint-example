@@ -21,6 +21,7 @@ Prevent reassign value to the parameters which are given by function.
 * [arrow-parens](https://eslint.org/docs/rules/arrow-parens)
 * [comma-dangle](https://eslint.org/docs/rules/comma-dangle)
 * [object-shorthand](https://eslint.org/docs/rules/object-shorthand)  
+
 It was how you should defind an object before ES6:  
 
 ```
