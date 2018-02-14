@@ -16,7 +16,8 @@ In the second case, I suggest you install ESLint **locally** no matter what you 
 If you want to learn more, [here is the details](https://stackoverflow.com/questions/37826449/expected-linebreaks-to-be-lf-but-found-crlf-linebreak-style-in-eslint-using).
 * [no-console](https://eslint.org/docs/rules/no-console)
 * [no-plusplus](https://eslint.org/docs/rules/no-plusplus)
-* [no-param-reassign](https://eslint.org/docs/rules/no-param-reassign)
+* [no-param-reassign](https://eslint.org/docs/rules/no-param-reassign)  
+
 Prevent reassign value to the parameters which are given by function.
 * [arrow-parens](https://eslint.org/docs/rules/arrow-parens)
 * [comma-dangle](https://eslint.org/docs/rules/comma-dangle)
