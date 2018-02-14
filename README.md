@@ -22,22 +22,22 @@ Prevent reassign value to the parameters which are given by function.
 * [comma-dangle](https://eslint.org/docs/rules/comma-dangle)
 * [object-shorthand](https://eslint.org/docs/rules/object-shorthand)  
 It was how you should defind an object before ES6:  
-
+```
 var foo = {
     w: function() {},
     x: function *() {},
     [y]: function() {},
     z: z
 };
-
+```
 It is how you should defind an object after ES6:  
-
+```
 var foo = {
     w() {},
     *x() {},
     [y]() {},
     z
 };
-    
+``` 
 Be noticed that when you only give a propery value, then the name of that property is the name of that parameter  
 (like 'z' property) 
