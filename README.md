@@ -12,12 +12,16 @@ The detail of this error is mentioned on [Running Problems](#running-problems).
 
 # Running Problems
 
+Below I list some problems which I was solved when I was installing ESLint module on my project.
+
 ### Error msg: Failed to load the ESLint library...
 
 There are two possible reason, one is you don't install ESLint well, and the other is you install ESLint **globally** with **yarn**.  
 In the second case, I suggest you install ESLint **locally** no matter what you are using*(npm or yarn)*.
 
 # Rules
+
+Below I list some ESLint rule which my code got errors based on.
 
 * [linebreak-style](https://eslint.org/docs/rules/linebreak-style)  
 If you want to learn more, [here is the details](https://stackoverflow.com/questions/37826449/expected-linebreaks-to-be-lf-but-found-crlf-linebreak-style-in-eslint-using).
