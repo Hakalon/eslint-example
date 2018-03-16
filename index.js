@@ -9,7 +9,7 @@ const pad = require('left-pad');
 const expressApp = express();
 
 // Set the server address at https://.../demo
-// ESLlint: new-cap, requires all new operators to be called with uppercase-started functions
+// ESLint: new-cap, requires all new operators to be called with uppercase-started functions
 const app = new alexa.app('emo');
 
 // Express server's Cert.
@@ -24,6 +24,8 @@ function reqErrHandler(err) {
   return new Promise((resolve, reject) => {
     console.log('reqErrHandler');
     if (err.error && typeof (err.error) === 'string') {
+      // ESLint: no-parm-reassing, 禁止賦值給函式給予的變數('body'為函式給予的變數)
+      // But in here I just ignore it, because that is what I mean to do.
       err = JSON.parse(err.error).error;
       err.name = 'RequestError';
       return reject(err);
@@ -37,7 +39,7 @@ function checkResp(count = 0) {
     console.log('checkResp');
     reqSender.get('https://openhab.ntust.ml/rest/items/ResponseEchoMessage')
       .then(body => {
-        // ESLint: no-param-reassign 禁止賦值給函式給予的變數('body'為函式給予的變數)
+        // ESLint: no-param-reassign, 禁止賦值給函式給予的變數('body'為函式給予的變數)
         // 但這邊會讓它通過，因為在這Promise中我只是將body重新轉化為Json格式
         if (body && typeof (body) === 'string') { body = JSON.parse(body); }
         if (body.state) { return resolve(body.state); }
@@ -47,7 +49,8 @@ function checkResp(count = 0) {
           return reject(err);
         }
         console.log(`checkResp recurs ${count + 1} times`);
-        //
+        // ESLint: no-param-reassign, 禁止賦值給函式給予的變數('body'為函式給予的變數)
+        // Same here.
         count++;
         return resolve(checkResp(count));
       })
@@ -56,6 +59,7 @@ function checkResp(count = 0) {
 }
 
 function cleanResp(resp) {
+  // ESLint: no-used-vars
   return new Promise((resolve, reject) => {
     console.log('cleanResp');
     reqSender.post({
@@ -63,9 +67,9 @@ function cleanResp(resp) {
       body: '',
     })
       .then(() => resolve(resp))
-      .catch(reqErrHandler);
-    // Line 59 fix
-    // .then(() => reject());
+      .catch(reqErrHandler)
+    // no-used-vars fixed
+      .then(() => reject());
   });
 }
 
