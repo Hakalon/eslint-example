@@ -6,9 +6,34 @@ This is a simple project for eslint.
 
 If your IDE is VScode, then you can follow [this document](https://wcc723.github.io/tool/2017/11/09/coding-style/).
 
-There is a plugin you can install in VScode, except that you also need to install eslint module in your project by npm or yarn.  
-If you are using yarn, you should install eslint module **locally** in project, or you will get an error.  
+Briefly, there is a plugin you can install in VScode, and except that you also need to install eslint module in your project by npm or yarn.  
+
+Be notice that if you are using yarn, you should install eslint module **locally** in project, or you will get an error.  
 The detail of this error is mentioned on [Running Problems](#running-problems).
+
+So after installing plugin in VScode, you can use these command to install eslint in your project.
+
+```=bash
+yarn add eslint -D
+// or
+npm install eslint -D
+```
+
+Then you need run eslint command to initialize your setting of eslint.
+```=bash
+node_modules/.bin/eslint --init
+//In here, I just suppose you install eslint locally.
+```
+
+Now you should go through three questions to help you do the setting, just answer it by yourself.
+
+If you must know, I choose Airbnb, json and no for the questions.
+
+When you are done with the questions, eslint will automatically install two dev dependencies for you.
+
+After the installation, you can reopen your IDE or files, then you will see the ESLint running on your Output window.
+
+Also there is a file named eslint.js to manage your rule setting. 
 
 # Running Problems
 
